@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>JavaScript is?</p>
+
+  <button onclick="check('a')">Programming Language</button>
+  <button onclick="check('b')">Database</button>
+
+  <p id="result"></p>
+
+  <script>
+
+    function check(ans) {
+
+      if (ans == "a")
+        document.getElementById("result").innerHTML = "Correct";
+
+      else
+        document.getElementById("result").innerHTML = "Incorrect";
+
+    }
+
+  </script>
+</body>
+
+</html>

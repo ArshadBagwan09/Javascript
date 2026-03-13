@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input onkeyup="searchItem()" id="search">
+
+  <ul id="fruits">
+
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+    <li>Orange</li>
+
+  </ul>
+
+  <script>
+
+    function searchItem() {
+
+      let input = document.getElementById("search").value.toLowerCase();
+
+      let items = document.querySelectorAll("#fruits li");
+
+      items.forEach(function (item) {
+
+        if (item.innerText.toLowerCase().includes(input))
+          item.style.display = "block";
+
+        else
+          item.style.display = "none";
+
+      });
+
+    }
+
+  </script>
+</body>
+
+</html>
